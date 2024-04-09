@@ -1,6 +1,8 @@
-.mainHeader{
-  background-image: linear-gradient(to right, #d85ead, #6433aa 50%);
+.navbar  {
+  background-image: linear-gradient(to right, #d85ead, #6433aa 50%) !important;
   padding: 5px;
+  border: none;
+  
 }
 .imagelogo{
   width: 170px;
@@ -14,11 +16,126 @@
 .mainHeader ul{
   list-style: none;  
 }
-.mainHeader ul li a{
+/* .navbar-collapse ul li a{
   color: white;
   text-decoration: none;
   margin-right: 25px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 17px;
+} */
+.navbar-collapse {
+  justify-content: flex-end !important;
+  display: flex;
+  margin: 8px;
+  margin-right: 25px;
+  font-weight: 500;
+  font-size: 17px;
+
+  text-decoration: none;
+
 }
+#mega-menu-full .navbar-collapse li a{
+color: white;
+
+}
+.dropdown-menu  a{
+  color: black;
+}
+.navbar-toggler {
+  background: whitesmoke;
+}
+/* Centering the logo */
+.imagelogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Adjusting the dropdown to the left */
+#navbarNavDropdown {
+  margin-left: auto;
+}
+.dropdown-container {
+  background-color: #6433aa;
+  padding: 10px;
+}
+.mt-1{
+  background: #fffefe;
+  min-width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.grid ul li a{
+  color: rgb(0, 0, 0);
+  
+}
+.text-sm{
+  color: rgb(0, 0, 0);
+  
+}
+.image1 img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: auto;
+  max-width: none;
+
+}
+
+@media (max-width: 768px) {
+  #mega-menu-full {
+    display: none;
+  }
+  .mt-1{
+    display: none;
+  }
+
+}
+@media (min-width: 768px) {
+  #navbarsecond{
+    display: none;
+  }
+}
+
+
+#navbarsecond{
+  width: 300px;
+  height: 100vh;
+  background: whitesmoke;
+  z-index: 5;
+  position: absolute;
+
+}
+#navbarsecond .navbar-collapse {
+  overflow: auto;
+  background: #6433aa;
+    display: flex !important;
+    margin: 0px !important;
+    font-weight: 500!important;
+    font-size: 17px!important;
+    color: white!important;
+    text-decoration: none!important;
+    flex-direction: column!important;
+    margin-left: -167px!important;
+
+}
+
+.mt-1{
+  position: absolute;
+    z-index: 5;
+    left: 50%;
+
+    width: 98%;
+max-width: 1800px;
+padding: 10px 10px 30px;
+transform: translate3d(-50%, 30px, 0);
+background: #ffffff;
+justify-content: flex-start;
+text-align: left;
+border-radius: 6px;
+box-shadow: 0 6px 8px rgba(110, 123, 157, 0.17);
+
+}   
