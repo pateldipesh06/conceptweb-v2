@@ -1,0 +1,48 @@
+/* Sidefilter.module.css */
+.containerFluid {
+    height: 100vh;
+    transition: margin-left 0.5s;
+}
+
+.row {
+    height: 100%;
+}
+
+.colAuto {
+    height: 100%;
+}
+
+.bgDark {
+    background-color: #343a40;
+}
+
+.textWhite {
+    color: #fff;
+}
+
+.navLink {
+    color: #fff;
+}
+
+.dropdownMenu {
+    background-color: #343a40;
+}
+
+.dropdownItem {
+    color: #fff;
+}
+
+.dropdownDivider {
+    border-top: 1px solid #4b5056;
+}
+
+.sidebarOpen {
+    margin-left: 0;
+}
+
+.toggleButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
