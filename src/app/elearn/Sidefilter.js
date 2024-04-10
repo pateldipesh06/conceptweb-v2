@@ -3,7 +3,41 @@ import Homecard from './Homecard';
 
 import img1 from './images/Activity.jpg';
 import img2 from './images/Simulation.jpg';
+import CardsList from './CardsList';
 
+
+const getTags = async () => {
+    try {
+        const res = await fetch("http://localhost:3000/api/tags/", {
+            cache: "no-store",
+        });
+
+        if (!res.ok) {
+            throw new Error("Failed to fetch Tags");
+        }
+
+        return res.json();
+
+    } catch (error) {
+        console.log("Error loading Tags: ", error);
+    }
+};
+
+
+const TagsList = async () => {
+
+    const { tags } = await getTags();
+    return (
+        tags.map((t) => (
+            console.log(t)
+        ))
+
+
+    );
+}
+
+
+TagsList();
 
 const Sidefilter = () => {
     // State to manage the sidebar's visibility
@@ -133,12 +167,13 @@ const Sidefilter = () => {
             <div className="col-10">
                     {/* Main content */}
                     <div className={`p-4 ${isSidebarOpen ? 'sm:ml-64' : ''} d-flex justify-evenly flex-wrap`}>
-                        <Homecard testimg={img1} title={"Practical - 1"} desc={"Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."} link={"Actpage"}/>
+                        <CardsList/>
+                        {/* <Homecard testimg={img1} title={"Practical - 1"} desc={"Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."} link={"Actpage"}/>
                         <Homecard testimg={img2} title={"Practical - 2"} desc={"Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."} link={"Actpage"}/>
                         <Homecard testimg={img1} title={"Practical - 3"} desc={"Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."} link={"Actpage"}/>
                         <Homecard testimg={img2} title={"Practical - 4"} desc={"Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."} link={"Actpage"}/>
                         <Homecard testimg={img1} title={"Practical - 5"} desc={"Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."} link={"Actpage"}/>
-                        <Homecard testimg={img2} title={"Practical - 6"} desc={"Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."} link={"Actpage"}/>
+                        <Homecard testimg={img2} title={"Practical - 6"} desc={"Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."} link={"Actpage"}/> */}
                     </div>
             </div>
         </div>
