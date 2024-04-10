@@ -16,7 +16,6 @@ function Page() {
         
           <Sidefilter/>
           <Actcoursol/>
-          <CardsList/>
 
 
       </div>
